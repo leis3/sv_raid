@@ -1,6 +1,7 @@
 use crate::{Type, Ability, Move};
+use serde::{Serialize, Deserialize};
 
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize)]
 pub struct Raid {
     /// 名前
     pub name: String,
