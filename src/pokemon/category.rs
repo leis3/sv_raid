@@ -1,5 +1,7 @@
+use serde::{Serialize, Deserialize};
+
 /// わざの種類
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize)]
 pub enum Category {
     Physical,
     Special,

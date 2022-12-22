@@ -1,5 +1,7 @@
+use serde::{Serialize, Deserialize};
+
 /// ポケモンのタイプ
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize)]
 pub enum Type {
     Normal,
     Fighting,

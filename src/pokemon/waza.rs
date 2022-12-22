@@ -1,7 +1,8 @@
 use crate::{Type, Category};
+use serde::{Serialize, Deserialize};
 
 /// わざ
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Serialize, Deserialize)]
 pub struct Move {
     pub name: String,
     pub r#type: Type,
