@@ -12,7 +12,7 @@ pub fn raid(name: &str, star: u8) -> Option<Raid> {
 }
 
 /// 指定した`name`や`star`で一致するテラレイドのリストを返す。
-pub fn raid_filter(name: Option<impl AsRef<str>>, star: Option<u8>) -> Vec<Raid> {
+pub fn raid_filter(name: Option<String>, star: Option<u8>) -> Vec<Raid> {
     raid::raid_data().into_iter().filter(|r| {
         name.as_ref().map_or(true, |s| r.name == s.as_ref()) &&
         star.map_or(true, |s| r.star == s)
